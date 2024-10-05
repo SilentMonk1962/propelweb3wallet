@@ -15,7 +15,6 @@ export default function SendTransactionForm() {
     const [txHash, setTxHash] = useState<string | null>(null)
 
     const { address, chain } = useAccount()
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { writeContractAsync, isPending, isSuccess: isConfirmed, isError } = useWriteContract()
 
     const notifyServer = useCallback(async () => {
@@ -64,6 +63,7 @@ export default function SendTransactionForm() {
             setTxHash(data)
             console.log(data)
         } catch (error) {
+            console.error('Transaction failed:', error)
             setApiError('Transaction failed. Please try again.')
         }
     }
