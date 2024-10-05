@@ -8,8 +8,8 @@ const TOKEN_ABI = [{ "inputs": [{ "internalType": "string", "name": "name", "typ
 const CHAIN_ID_FOR_TOKEN_RECEIPT = sepolia.id
 
 export default function SendTransactionForm() {
-    const POOLED_WALLET_ADDRESS = process.env.NEXT_PUBLIC_POOLED_WALLET_ADDRESS;
-    const USDT_TOKEN_ADDRESS = process.env.NEXT_PUBLIC_USDT_TOKEN_ADDRESS
+    const POOLED_WALLET_ADDRESS = process.env.NEXT_PUBLIC_POOLED_WALLET_ADDRESS!;
+    const USDT_TOKEN_ADDRESS = process.env.NEXT_PUBLIC_USDT_TOKEN_ADDRESS!;
     if (!USDT_TOKEN_ADDRESS) {
         throw new Error('NEXT_PUBLIC_USDT_TOKEN_ADDRESS is not defined');
     }
