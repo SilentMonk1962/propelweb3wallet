@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build-and-start": "npm run build && npm run start",
+    "dev-and-start": "npm run dev"
   },
   "dependencies": {
     "@reown/appkit": "^1.0.6",

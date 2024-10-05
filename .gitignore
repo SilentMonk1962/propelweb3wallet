@@ -37,3 +37,6 @@ next-env.d.ts
 
 # pm2 config file
 ecosystem.config.js
+
+# personal notes on the project
+personalnotes.txt
