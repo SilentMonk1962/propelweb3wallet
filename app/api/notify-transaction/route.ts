@@ -5,12 +5,14 @@ import axios from 'axios'
 const API_ENDPOINT = process.env.API_ENDPOINT
 const API_SECRET_KEY = process.env.API_SECRET_KEY
 
-if (!API_ENDPOINT || !API_SECRET_KEY) {
-    throw new Error('API_ENDPOINT and API_SECRET_KEY must be set in environment variables')
-}
+
 
 export async function POST(request: Request) {
+
     try {
+        if (!API_ENDPOINT || !API_SECRET_KEY) {
+            throw new Error('API_ENDPOINT and API_SECRET_KEY must be set in environment variables')
+        }
         const body = await request.json()
         const { amount, transactionHash, senderAddress } = body
 

@@ -40,3 +40,7 @@ ecosystem.config.js
 
 # personal notes on the project
 personalnotes.txt
+
+# Environment variables
+.env.production.local
+.env.development.local
