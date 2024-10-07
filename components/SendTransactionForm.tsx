@@ -7,7 +7,7 @@ import { baseSepolia } from 'viem/chains';
 const CHAIN_ID_FOR_TOKEN_RECEIPT = baseSepolia.id;
 
 export default function SendTransactionForm() {
-    const ERC20_TOKEN_ABI = process.env.NEXT_PUBLIC_USDC_BASE_SEPOLIA_L2_TOKEN_ABI!;
+    const ERC20_TOKEN_ABI = process.env.NEXT_PUBLIC_USDC_BASE_SEPOLIA_L2_TOKEN_ORIGINAL_ABI!;
     const ERC20_TOKEN_ADDRESS = process.env.NEXT_PUBLIC_USDC_TOKEN_ADDRESS_ON_BASE_SEPOLIA!;
     const POOLED_WALLET_ADDRESS = process.env.NEXT_PUBLIC_POOLED_WALLET_ADDRESS!;
 
@@ -131,7 +131,7 @@ export default function SendTransactionForm() {
                     <strong>Note from Propel:</strong>
                 </p>
                 <p className="mb-3">
-                    Most USDC deposits on Base Sepolia are instant, but some may take up to 24 hours to reflect in your account.
+                    Most USDC deposits are instant, but some may take up to 24 hours to reflect in your account.
                 </p>
                 <p>In case of any issues, please contact support@propelapp.in.</p>
                 {isError && <p className="text-red-500 mt-2">Could not process the transaction. Please retry.</p>}

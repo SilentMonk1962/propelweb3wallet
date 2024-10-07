@@ -5,9 +5,11 @@
 import { wagmiAdapter, projectId } from '@/config'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { createAppKit } from '@reown/appkit/react'
-import { sepolia, mainnet, arbitrum, avalanche, base, optimism, polygon, baseSepolia } from '@reown/appkit/networks'
+
+import { baseSepolia } from '@reown/appkit/networks'
 import React, { type ReactNode } from 'react'
 import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
+//import { baseSepolia } from '@wagmi/core/chains'
 
 //for user transaction, we will use Viem
 
@@ -33,7 +35,7 @@ const metadata = {
 const modal = createAppKit({
     adapters: [wagmiAdapter],
     projectId,
-    networks: [sepolia, baseSepolia, mainnet, arbitrum, avalanche, base, optimism, polygon],
+    networks: [baseSepolia],
     defaultNetwork: baseSepolia,
     metadata: metadata,
     features: {
