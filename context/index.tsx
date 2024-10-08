@@ -9,9 +9,6 @@ import { createAppKit } from '@reown/appkit/react'
 import { baseSepolia } from '@reown/appkit/networks'
 import React, { type ReactNode } from 'react'
 import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
-//import { baseSepolia } from '@wagmi/core/chains'
-
-//for user transaction, we will use Viem
 
 
 

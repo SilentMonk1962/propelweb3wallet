@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
-//import localFont from "next/font/local";
 import "./globals.css";
-//import { Inter } from "next/font/google";
-import "./globals.css";
-import { headers } from "next/headers"; // added
+import { headers } from "next/headers";
 import ContextProvider from '@/context'
 
 export const metadata: Metadata = {
-  title: "Web3 Propel",
+  title: "Propel Deposit",
   description: "By Ataraxia Software Studios"
 };
 
