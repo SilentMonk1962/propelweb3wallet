@@ -14,10 +14,10 @@ export async function GET(request: NextRequest) {
         token = request.cookies.get('auth_token')?.value;
     }
 
-    console.log('Authorization Header:', request.headers.get('authorization'));
-    console.log('Auth Token Cookie:', request.cookies.get('auth_token')?.value);
-    console.log('Token:', token);
-    console.log('Secret:', JWT_SECRET);
+    //console.log('Authorization Header:', request.headers.get('authorization'));
+    //console.log('Auth Token Cookie:', request.cookies.get('auth_token')?.value);
+    //console.log('Token:', token);
+    //console.log('Secret:', JWT_SECRET);
 
     if (!token) {
         return NextResponse.json({ error: 'No token provided' }, { status: 401 });
@@ -30,7 +30,7 @@ export async function GET(request: NextRequest) {
             algorithms: ['HS256'],
         });
 
-        console.log('Decoded payload:', payload);
+        //console.log('Decoded payload:', payload);
 
         const userInfo = {
             userId: payload.userID,

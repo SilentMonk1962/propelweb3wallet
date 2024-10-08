@@ -147,7 +147,7 @@ export default function SendTransactionForm() {
                 args: [pooledWalletAddress, parseUnits(amount, 6)],
             });
             setTxHash(data);
-            console.log('Transaction sent, hash:', data);
+            //console.log('Transaction sent, hash:', data);
             setStatus(TransactionStatus.AWAITING_HASH);
         } catch (error) {
             console.error('Transaction failed:', error);

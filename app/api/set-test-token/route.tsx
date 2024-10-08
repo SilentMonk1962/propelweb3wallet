@@ -19,7 +19,7 @@ export async function GET() {
         .setExpirationTime('5m')
         .sign(secret)
 
-    console.log('Generated token:', token)
+    //console.log('Generated token:', token)
 
     const response = NextResponse.json({ success: true, token })
     response.cookies.set('auth_token', token, {

@@ -16,6 +16,7 @@ interface JWTPayload {
 
 export async function POST(request: NextRequest): Promise<NextResponse> {
     // Development mode responses
+    /*
     if (process.env.NODE_ENV === 'development') {
         // Simulate successful transaction
         if (request.headers.get('x-simulate-success') === 'true') {
@@ -26,7 +27,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
             return NextResponse.json({ isDuplicate: true, message: 'Duplicate transaction detected' }, { status: 400 });
         }
     }
-
+*/
     try {
         const body = await request.json();
         const { amount, transactionHash, senderAddress } = body;
@@ -50,7 +51,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
             return NextResponse.json({ error: 'Invalid token' }, { status: 401 });
         }
 
-        console.log('Decoded JWT:', decoded);
+        //console.log('Decoded JWT:', decoded);
 
         const payload = {
             userId: decoded.userID,
@@ -77,7 +78,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
         }
 
         const data = await response.json();
-        console.log('API response:', data);
+        //console.log('API response:', data);
 
         // Check for duplicate entries
         if (data.isDuplicate) {
